@@ -42,3 +42,12 @@ document.querySelectorAll('.stage-card').forEach(card => {
         card.classList.add('animate');
     });
 });
+// إخفاء جميع الفيديوهات وعرض الفيديو المناسب
+document.querySelectorAll('.stage-card').forEach((card, index) => {
+    card.addEventListener('click', () => {
+        // إخفاء جميع الفيديوهات
+        document.querySelectorAll('.stage-video').forEach(video => video.style.display = 'none');
+        // عرض الفيديو المختار
+        document.getElementById(`stage-${index + 1}`).style.display = 'block';
+    });
+});
