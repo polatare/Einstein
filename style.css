@@ -109,6 +109,35 @@ h1, h2, h3, p {
     font-size: 1.1em;
     transition: color 0.3s ease;
 }
+/* تغيير خلفية البطاقات في الوضع الداكن */
+.dark-mode .stage-card {
+    background-color: #000; /* لون خلفية أسود */
+    color: #00bcd4; /* لون النص لبني */
+    border: 1px solid #00bcd4; /* إضافة حدود لبنية لتحديد البطاقات */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* تحسين الظل */
+}
+
+/* تخصيص ألوان النصوص */
+.dark-mode .stage-card h3 {
+    color: #00bcd4; /* اللون اللبني لعناوين البطاقات */
+}
+.dark-mode .stage-card p {
+    color: #f4f4f4; /* لون نصوص وصف البطاقة */
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
 
 .navbar ul li a:hover {
     color: #00d9ff;
