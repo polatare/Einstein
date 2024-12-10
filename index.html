@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أينشتاين - تعليم الفيزياء</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="D:\html/einstein.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        header.hero {
+            position: relative;
+            background-image: url('https://st2.depositphotos.com/2824873/12309/v/950/depositphotos_123092006-stock-illustration-physics-background-02-a.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: background 0.3s ease-in-out;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+        nav.navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav.navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav.navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .dark-mode nav.navbar {
+            background-color: #222;
+        }
+        .mode-toggle {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .courses .stage-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stage-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .stage-card:hover {
+            background-color: #e0e0e0;
+        }
+        .dark-mode .stage-card {
+            background-color: rgba(50, 50, 50, 0.9);
+        }
+        .stage-card h3 {
+            color: #333;
+        }
+        .dark-mode .stage-card h3 {
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" id="hero">
+        <div class="overlay">
+            <h1>منصة أينشتاين</h1>
+            <p>تعلم الفيزياء الكهربية بأسلوب ممتع وجذاب</p>
+            <a href="#courses" class="btn">ابدأ التعلم الآن</a>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">عن الفيزياء</a></li>
+            <li><a href="#courses">الدروس</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+        <div class="mode-toggle" id="mode-toggle">🌙</div>
+    </nav>
+
+    <main>
+        <section id="about" class="about">
+            <h2>عن الفيزياء</h2>
+            <p>الفيزياء هي نافذة لفهم العالم والطبيعة من حولنا. اكتشف معنا القوانين التي تجعل كل شيء يعمل بانسجام.</p>
+        </section>
+        <section id="courses" class="courses">
+            <h2>المراحل الدراسية</h2>
+            <div class="stage-list">
+                <div class="stage-card" id="card-1" onclick="location.href='grade1.html'">
+                    <h3>الصف الأول الثانوي</h3>
+                    <p>علوم متكامله.</p>
+                </div>
+                <div class="stage-card" id="card-2" onclick="location.href='grade2.html'">
+                    <h3>الصف الثاني الثانوي</h3>
+                    <p>الفصل الاول و الثاني و الثالث.</p>
+                </div>
+                <div class="stage-card" id="card-3" onclick="location.href='grade3.html'">
+                    <h3>الصف الثالث الثانوي</h3>
+                    <p>فيزياء كهربيه و حديثه.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>𝝅 Pola Tarek Ragaey&copy; 2024 جميع الحقوق محفوظة</p>
+    </footer> 
+
+    <script>
+        const toggleButton = document.getElementById('mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
